@@ -1,6 +1,6 @@
 [project]
 name = "htd"
-version = "0.1.0"
+version = "0.0.1"
 description = "Parse time deltas from human-readable strings"
 authors = [
     {name = "Baptiste Fontaine",email = "baptiste@bixoto.com"}
