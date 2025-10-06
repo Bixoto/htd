@@ -15,7 +15,7 @@ SYMBOLS = {
 RE = re.compile(rf"(\d+(?:\.\d+)?[{''.join(SYMBOLS)}])")
 
 
-def parse(s: str):
+def parse(s: str) -> timedelta:
     """
     Parse a string such as `"2d4h10s"` and return a `datetime.timedelta` object.
     """

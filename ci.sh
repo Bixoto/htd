@@ -11,5 +11,5 @@ if [ -n "$BRANCHCOV" ]; then
 fi
 
 poetry run ruff check htd
-poetry run mypy --check-untyped-defs --explicit-package-bases htd/*.py
+poetry run mypy --strict --check-untyped-defs --explicit-package-bases htd/*.py
 poetry run pytest --cov=htd $COV_ARGS tests/
