@@ -1,9 +1,9 @@
 [project]
 name = "htd"
-version = "0.0.1"
+version = "0.0.2"
 description = "Parse time deltas from human-readable strings"
 authors = [
-    {name = "Baptiste Fontaine",email = "baptiste@bixoto.com"}
+    { name = "Baptiste Fontaine", email = "baptiste@bixoto.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.9"

@@ -1,13 +1,15 @@
 from datetime import timedelta as t
 
-import htd
 import pytest
+
+import htd
 
 
 @pytest.mark.parametrize("s,expected", [
     ("", t()),
     #
     ("1s", t(seconds=1)),
+    ("-1s", t(seconds=-1)),
     ("1m", t(minutes=1)),
     ("1h", t(hours=1)),
     ("1d", t(days=1)),
@@ -21,3 +23,11 @@ import pytest
 ])
 def test_parse(s, expected):
     assert htd.parse(s) == expected
+
+
+@pytest.mark.parametrize("s", [
+    "hello",
+    "4y",
+])
+def test_parse_invalid(s):
+    assert htd.parse(s) == t()
